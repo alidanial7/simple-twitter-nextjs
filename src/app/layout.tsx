@@ -2,6 +2,7 @@
 
 import { theme } from "@/theme/theme";
 import { ThemeProvider } from "@emotion/react";
+import { CssBaseline } from "@mui/material";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <body className={inter.className}>{children}</body>
       </ThemeProvider>
     </html>

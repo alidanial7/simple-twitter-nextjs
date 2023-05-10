@@ -1,11 +1,20 @@
 "use client";
 
-import { Button } from "@mui/material";
+import { Button, Card, TextField } from "@mui/material";
 
 export default function Home() {
   return (
     <div>
-      <Button variant="contained">Text</Button>
+      <Card>
+        <Button variant="contained">Text</Button>
+        <TextField
+          id="outlined-basic"
+          variant="outlined"
+          inputProps={{
+            autoComplete: "none",
+          }}
+        />
+      </Card>
     </div>
   );
 }
