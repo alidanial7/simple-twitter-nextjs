@@ -5,6 +5,9 @@ export const theme: ThemeOptions = createTheme({
     background: {
       default: "#06151d",
     },
+    primary: {
+      main: "#1b7fbc",
+    },
   },
   components: {
     MuiCard: {
@@ -30,6 +33,27 @@ export const theme: ThemeOptions = createTheme({
           "& .MuiFormLabel-root": {
             color: "#f9feff",
           },
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          background: "#06151ddd",
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: "#f9feff",
+        },
+      },
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          background: "#566571",
         },
       },
     },

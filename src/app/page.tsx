@@ -1,11 +1,24 @@
 "use client";
 
-import { Button, Card, TextField } from "@mui/material";
+import ProfileCard from "@/components/ProfileCard/ProfileCard";
+import { Button, Card, Stack, TextField } from "@mui/material";
 
 export default function Home() {
   return (
-    <div>
-      <Card>
+    <Stack direction="row" spacing={2} padding={2}>
+      <Stack
+        sx={{
+          width: "300px",
+        }}
+      >
+        <ProfileCard />
+      </Stack>
+      <Card
+        sx={{
+          flex: 1,
+          height: "1000px",
+        }}
+      >
         <Button variant="contained">Text</Button>
         <TextField
           id="outlined-basic"
@@ -15,6 +28,13 @@ export default function Home() {
           }}
         />
       </Card>
-    </div>
+      <Stack
+        sx={{
+          width: "300px",
+        }}
+      >
+        <Card>d</Card>
+      </Stack>
+    </Stack>
   );
 }

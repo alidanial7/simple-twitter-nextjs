@@ -2,8 +2,15 @@
 
 import { theme } from "@/theme/theme";
 import { ThemeProvider } from "@emotion/react";
-import { CssBaseline } from "@mui/material";
+import {
+  AppBar,
+  CssBaseline,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import { Inter } from "next/font/google";
+import { FaTwitter } from "react-icons/fa";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +28,17 @@ export default function RootLayout({
     <html lang="en">
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <AppBar elevation={0} position="sticky">
+            <Toolbar>
+              <IconButton>
+                <FaTwitter color="#1da1f1" fontSize="28px" />
+              </IconButton>
+              <Typography>Simple Twitter</Typography>
+            </Toolbar>
+          </AppBar>
+          {children}
+        </body>
       </ThemeProvider>
     </html>
   );
